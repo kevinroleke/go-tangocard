@@ -40,6 +40,11 @@ type Brand struct {
 	Items            []Item            `json:"items"`
 }
 
+type Fee struct {
+	Type string `json:"type"`
+	Value float64 `json:"value"`
+}
+
 // Item represents a denomination of the gift card from the brand
 type Item struct {
 	UTID         string     `json:"utid"`
@@ -52,4 +57,5 @@ type Item struct {
 	MinValue     float64    `json:"minValue"`
 	MaxValue     float64    `json:"maxValue"`
 	Countries    []string   `json:"countries"`
+	Fee Fee `json:"fee"`
 }
