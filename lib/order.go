@@ -77,4 +77,5 @@ type CreateOrderCriteria struct {
 	SendEmail          bool     `json:"sendEmail"`
 	Sender             *Contact `json:"sender"`
 	UTID               string   `json:"utid"`
+	DeliveryMethod string `json:"deliveryMethod"`
 }
