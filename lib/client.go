@@ -75,6 +75,13 @@ func (c *Client) GetOrders(r *GetOrdersRequest) (*GetOrdersResponse, error) {
 	return or, err
 }
 
+func (c *Client) GetExchangeRates(r *GetExchangeRatesRequest) (*GetExchangeRatesResponse, error) {
+	or := &GetExchangeRatesResponse{}
+	uri := fmt.Sprintf("/exchangerates?baseCurrency=%s&rewardCurrency=%s", r.BaseCurrency, r.RewardCurrency)
+	err := c.requestAndParseResponse("GET", uri, nil, or)
+	return or, err
+}
+
 // CreateOrder creates a new order of course
 func (c *Client) CreateOrder(r *CreateOrderCriteria) (*Order, error) {
 	or := &Order{}
