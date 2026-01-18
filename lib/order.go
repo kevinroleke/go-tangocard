@@ -16,8 +16,8 @@ type Denomination struct {
 // Contact struct represents a contact for the order (email recipient OR sender)
 type Contact struct {
 	Email     string `json:"email"`
-	FirstName string `json:"first_name"`
-	LastName  string `json:"last_name"`
+	FirstName string `json:"firstName"`
+	LastName  string `json:"lastName"`
 }
 
 // Credential ...
