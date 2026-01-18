@@ -27,6 +27,11 @@ const (
 	RewardTypeGiftCard RewardType = "gift card"
 )
 
+type Category struct {
+	Identifier string `json:"identifier"`
+	Description string `json:"description"`
+}
+
 // Brand is the sponsor for the card
 type Brand struct {
 	Key              string            `json:"brandKey"`
@@ -38,6 +43,7 @@ type Brand struct {
 	ImageURLs        map[string]string `json:"imageUrls"`
 	Status           Status            `json:"status"`
 	Items            []Item            `json:"items"`
+	Categories 		 []Category 	   `json:"categories"`
 }
 
 type Fee struct {
